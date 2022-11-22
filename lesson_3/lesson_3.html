@@ -72,7 +72,7 @@
       //     i = 3;
       //   } else {
       //     if(i < 2) {
-      //       alert(`${3 - i - 1} `) // 2 // 1 // 
+      //       alert(`${3 - i - 1} `) // 2 // 1 //
       //     } else {
       //       alert('blocked')
       //     }
@@ -87,15 +87,51 @@
       //   }
       // }
       // условные задачи
-      // let input = prompt('напиши');
       // let number = prompt('угадай число');
       // let random = Math.floor(Math.random() * 20)
-      
+
       // цикл задачи
-      // fibanchy 0 1 2 3 5 8 13 21 
+      // fibanchy 0 1 2 3 5 8 13 21
       // 1900 - 2022
       // 500 -500
-      
+
+      // let input = prompt('напиши');
+
+      // if(+input) {
+      //   console.log(+input * 2)
+      // } else {
+      //   console.log(input)
+      // }
+      let result = 0;
+      let a = 0;
+      let b = 1;
+
+      for (let i = 0; i <= 4; i++) {
+        //       0 + 1
+        //       1 + 1
+        //       2 + 3
+        //       3 + 5
+        result = a + b
+        // result output 1
+        // result output 2
+        // result output 5
+
+
+        a = b
+        // a output 1
+        // a output 2
+        // a output 3
+
+
+        b = result
+        // b output 1
+        // b output 1
+        // b output 2
+        // b output 5
+
+
+        console.log(result) // 8
+      }
     </script>
   </body>
 </html>
