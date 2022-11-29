@@ -8,30 +8,45 @@
   </head>
   <body>
     <script>
-      // let questions = [
-      //   {question: 'КР президенти ким?', output: 'Садыр Жапаров', score: 2},
-      //   {question: 'Кыргызстанда канча область бар?', output: '7', score: 2},
-      //   {question: 'Озгон району кайсы областка кирет', output: 'Ош', score: 2},
-      //   {question: 'Бетховин ким болгон?', output: 'Композитор', score: 2},
-      //   {question: 'Узбекистандын борбор шаары кайсы', output: 'Ташкент', score: 2}
-      // ]
+      let questions = [
+        {question: 'КР президенти ким?', output: 'Садыр Жапаров', score: 2},
+        {question: 'Кыргызстанда канча область бар?', output: '7', score: 2},
+        {question: 'Озгон району кайсы областка кирет', output: 'Ош', score: 2},
+        {question: 'Бетховин ким болгон?', output: 'Композитор', score: 2},
+        {question: 'Узбекистандын борбор шаары кайсы', output: 'Ташкент', score: 2}
+      ]
       // let question = prompt('КР президенти ким?')
 
       // вопростор порядка менен промптон чыгыш керек
       // вопростор условияга туура келиш керек
       // туура келген вопростордун баллын эсептеш керек
       // туура жана туура эместердин санын эсептеш керек
+      
+      let total = 0;
+      let correct = 0;
+      let notCorrect = 0;
+      let arrCorect = []
+      let arrNotCorect = []
 
-      // let total = 0;
-      // let correct = 0;
-      // let notCorrect = 0;
-      // let arrCorect = []
-      // let arrNotCorect = []
-      // console.log('общий тотал >>> ', total);
-      // console.log('правильные ответы >>> ', correct)
-      // console.log('не правильные ответы >>> ', notCorrect)
 
-      let arr = [];
+      // for(let i = 0; i < questions.length; i++) {
+      //   let question = prompt(questions[i].question);
+      //   if(question === questions[i].output) {
+      //     total+= questions[i].score
+      //     correct++
+      //     arrCorect.push(questions[i].question)
+      //   } else {
+      //     notCorrect++
+      //     arrNotCorect.push(questions[i].question)
+      //   }
+      // }
+      console.log('общий тотал >>> ', total);
+      console.log('количество правилные ответы >>> ', correct)
+      console.log('правильные ответы >>> ', arrCorect)
+
+      console.log('количество не правильные ответы >>> ', notCorrect)
+      console.log('не правильные ответы >>> ', arrNotCorect)
+      
 
       // before push
       // console.log('before push >> ', arr)
@@ -39,15 +54,21 @@
 
       // // after push
       // console.log('after push>> ', arr)
-      let arr2 = ['apple', 'lemon']
-      arr2.push('arbuz')
-      console.log(arr2)
+      // let arr2 = ['apple', 'lemon']
+      // arr2.push('arbuz')
+      // console.log(arr2)
+      let arr = [] // пустой массив индекс
+      let object = {} // ключ
       for(let i = 0; i < 100; i++) {
         if(i % 7 == 0) {
           arr.push(i)
         }
       }
       console.log(arr)
+      let animals = ['tiger', 'lion', 'dog'];
+      console.log(animals)
+      animals.pop()
+      console.log(animals)
     </script>
   </body>
 </html>

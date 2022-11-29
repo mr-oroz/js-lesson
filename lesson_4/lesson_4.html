@@ -114,32 +114,30 @@
       // }
 
       // дз
-      // let admins = [
-      //   { login: "Asan", password: 1234, id: 1 },
-      //   { login: "Marat", password: 4321, id: 2 },
-      //   { login: "Uson", password: 123, id: 3 },
-      //   { login: "Hasan", password: 9876, id: 4 },
-      //   { login: "Husan", password: 6789, id: 5 },
-      //   { login: "Arsen", password: 543, id: 6 },
-
-      // ];
-      // let login = prompt("login");
-      // let password = prompt("password");
+      let admins = [
+        { login: "Asan", password: 1234, id: 1 },
+        { login: "Marat", password: 4321, id: 2 },
+        { login: "Uson", password: 123, id: 3 },
+        { login: "Hasan", password: 9876, id: 4 },
+        { login: "Husan", password: 6789, id: 5 },
+        { login: "Arsen", password: 543, id: 6 },
+      ];
+      let login = prompt("login");
+      let password = prompt("password");
 
       // if(login === admins[0].login && password === admins[0].password) {
       //   console.log(`hello ${admins[0].login}`)
       // } else {
       //   console.log('error')
       // }
-      // for(let i = 0; i < admins.length; i++) {
-      //   console.log(admins[i])
-      //   if(login === admins[i].login && password === admins[i].password) {
-      //     console.log(`hello ${admins[i].login}`)
-      //     break;
-      //   } else {
-      //     console.log('error')
-      //   }
-      // }
+      for(let i = 0; i < admins.length; i++) {
+        console.log(admins[i])
+        if(login === admins[i].login && password === admins[i].password) {
+          console.log(`hello ${admins[i].login}`)
+        } else {
+          console.log('error')
+        }
+      }
 
     </script>
   </body>

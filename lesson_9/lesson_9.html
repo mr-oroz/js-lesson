@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let a = Math.floor(Math.random() * 20)
+    // let b = Math.floor(Math.random() * 20)
+    // let c = Math.floor(Math.random() * 20)
+    // let d = Math.floor(Math.random() * 20)
+    // let result = null;
+    // if(a < b && a < c && a < d) {
+    //   result = a
+    //   console.log(`variable a: ${result}`)
+    // } else if (b < a && b < c && b < d) {
+    //   result = b
+    //   console.log(`variable b: ${result}`)
+    // } else if (c < b && c < a && c < d) {
+    //   result = c
+    //   console.log(`variable c: ${result}`)
+    // } else if (d < c && d < b && d < a) {
+    //   result = d
+    //   console.log(`variable d: ${result}`)
+    // }
+    // console.log('a : ', a)
+    // console.log('b : ', b)
+    // console.log('c : ', c)
+    // console.log('d : ', d)
+
+    // console.log(myFunc())
+
+    // function myFunc(text = 'hello world') {
+    //   return text 
+    // }
+    // console.log(myFunc('privet mir'))
+    // console.log(myFunc())
+    // console.log(myFunc())
+    // console.log(myFunc())
+    // console.log(myFunc())
+
+
+    // function muFunc2 (a, b) {
+    //   return a + b
+    // }
+
+    // console.log(muFunc2(5, 4))
+
+    // function checkAge(ageСheck) {
+    //   if(ageСheck < 18) {
+    //     return confirm('родители разрешили?')
+    //   } else {
+    //     return true
+    //   }
+    // }
+
+    // let age = +prompt('тебе 18+?')
+
+    // if(checkAge(age)) {
+    //   alert('доступ открыто')
+    // } else {
+    //   alert('доступ закрыто')
+    // }
+    let arr = [12, 32, 10, 23, 1, 2, 9];
+
+    function myFunc(array, target) {
+      for(let i = 0; i < array.length; i++) {
+        for(let j = i + 1; j < array.length; j++ ) {
+          if(array[i] + array[j] === target) {
+            console.log(i, j)
+            i = array.length
+          }
+        }
+      }
+    }
+    console.log(myFunc(arr, 24)) // output 0, 4
+  </script>
+</body>
+</html>
