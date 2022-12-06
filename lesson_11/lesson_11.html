@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .h1 {
+        color: red;
+      }
+      .box {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <!-- <h1 id="title" class="h1">hello world</h1>
+    <h1 id="title1" class="h1">hello world</h1>
+    <h1 id="title2" class="h1">hello world</h1>
+    <h1 id="title3" class="h1">hello world</h1>
+    <h1 id="title4" class="h1">hello world</h1>
+    <span>hello span</span>
+    <span>hello span</span>
+    <span>hello span</span>
+    <span>hello span</span>
+    <span>hello span</span>
+    <span>hello span</span>
+    <h2>hello itc</h2>
+    <div class="box"></div>
+    <div class="box"></div> -->
+
+    <script>
+      // alert('hello world')
+      // DOM DOCUMENT OBJECK MODAL
+
+      // methods
+      // getElementsByTagName() таг
+      // getElementsByClassName() class
+      // getElemementById()
+      // document.getElementsByTagName("h1")[0].innerText = "privet mir";
+      // document.getElementsByTagName("h1")[1].innerHTML = 'hello h2';
+      // document.getElementsByTagName("h1")[2];
+      // document.getElementsByTagName("h1")[3];
+      // document.getElementsByTagName("h1")[4];
+      // let texts = document.getElementsByTagName("h1");
+      // let textsClass = document.getElementsByClassName("h1");
+
+      // variant byid
+
+      // let title = document.getElementById('title')
+      // let title1 = document.getElementById('title1')
+      // let title2 = document.getElementById('title2')
+      // let title3 = document.getElementById('title3')
+      // let title4 = document.getElementById('title4')
+
+      // tagname variant
+      // texts[0].innerText = 'hello h1 1'
+      // texts[1].innerText = 'hello h1 2'
+      // texts[2].innerText = 'hello h1 3'
+      // texts[3].innerText = 'hello h1 4'
+      // texts[4].innerText = 'hello h1 5'
+
+      // classname variant
+      // textsClass[0].innerText = 'hello h1 1'
+      // textsClass[1].innerText = 'hello h1 2'
+      // textsClass[2].innerText = 'hello h1 3'
+      // textsClass[3].innerText = 'hello h1 4'
+      // textsClass[4].innerText = 'hello h1 5'
+
+      // меняем стиль
+      // textsClass[0].style.color = "red";
+      // textsClass[1].style.color = "blue";
+      // textsClass[2].style.color = "green";
+      // textsClass[3].style.color = "orange";
+      // textsClass[4].style.color = "yellow";
+
+      // let box = document.getElementsByClassName("box");
+
+      // const myFunc = () => {
+      //   box[0].style.width = "500px";
+      //   box[0].style.height = "500px";
+      //   box[0].style.backgroundColor = "red";
+      //   box[1].style.width = "500px";
+      //   box[1].style.height = "500px";
+      //   box[1].style.backgroundColor = "green";
+      //   box[1].style.borderRadius = "50%";
+      // };
+      // myFunc()
+      // document.body.innerHTML = `<h1>hello body</h1>`
+
+      // планирования setInterval() setTimeOut()
+
+      // 1 variant
+      // const myFunc = () => {
+      //   console.log('1')
+      // }
+      // setInterval(myFunc, 1000)  // 1000 === 1sekund
+
+      // setInterval(() => {
+      //   console.log('1')
+      // }, 1000)
+
+      // setTimeout(() => {
+      //   console.log('1')
+      // }, 1000)
+      let text = document.getElementsByTagName("h1")[0];
+
+      // setTimeout(() => {
+      //   text.innerText = 'hello world'
+      // }, 3000)
+      // let i = 0;
+      // let j = 28;
+      // let colors = ['green', 'red', 'blue', 'orange'];
+      // let a = 0;
+      // setInterval(() => {
+      //   text.innerText = i;
+      //   text.style.fontSize = `${j}px`;
+      //   text.style.color = colors[a]
+      //   j += 10;
+      //   if (i === 10) {
+      //     i = 0;
+      //   } else {
+      //     i++;
+      //   }
+      //   if(a === 3) {
+      //     a = 0
+      //   } else {
+      //     a++
+      //   }
+      // }, 1000);
+      let i = 0
+      setInterval(() => {
+        text.innerText = i
+        if(i === 10) {
+          i = 0
+        } else {
+          i++
+        }
+      }, 1000)
+    </script>
+  </body>
+</html>

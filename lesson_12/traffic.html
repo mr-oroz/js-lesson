@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>traffic</title>
+  <style>
+    .box {
+      display: inline-block;
+      background-color: black;
+      padding: 15px;
+      margin: 30px;
+    }
+    .item {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border:  2px solid white;
+      margin: 10px;
+    }
+    .red {
+      background-color: red;
+    }
+    .yellow {
+      background-color: yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .green {
+      background-color: green;
+    }
+    span {
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+  <h1></h1>
+  <div class="box">
+    <div id="red" class="item"></div>
+    <div class="yellow item"><span id="timer"></span></div>
+    <div id="green" class="item"></div>
+  </div>
+  <div class="box">
+    <div id="red2" class="item"></div>
+    <div class="yellow item"><span id="timer2"></span></div>
+    <div id="green2" class="item"></div>
+  </div>
+  <script>
+    let h1 = document.getElementsByTagName('h1')
+    let timer = document.getElementById('timer')
+    let timer2 = document.getElementById('timer2')
+    let red = document.getElementById('red')
+    let green = document.getElementById('green')
+    let red2 = document.getElementById('red2')
+    let green2 = document.getElementById('green2')
+    let text = 'hello';
+    let time = 10
+    setInterval(() => {
+      timer.innerText = time
+      timer2.innerText = time
+      if(time === 0) {
+        time = 10
+        text = text === 'hello' ? 'privet' : 'hello'
+      } else {
+        time--
+      }
+      setTimeout(() => {
+        if(time < 5) {
+          timer.style.display = 'none'
+          timer2.style.display = 'none'
+        }
+      }, 500)
+      timer.style.display = 'block'
+      timer2.style.display = 'block'
+
+      if(text === 'hello') {
+        red.style.backgroundColor = 'red'
+        green.style.backgroundColor = 'black'
+        red2.style.backgroundColor = 'black'
+        green2.style.backgroundColor = 'green'
+      } else if(text === 'privet') {
+        red.style.backgroundColor = 'black'
+        green.style.backgroundColor = 'green'
+        red2.style.backgroundColor = 'red'
+        green2.style.backgroundColor = 'black'
+      }
+    }, 1000)
+    
+
+  </script>
+</body>
+</html>
