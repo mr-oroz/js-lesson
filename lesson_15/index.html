@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .block {
+      display: grid;
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px;
+    }
+
+    .item {
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">turn X</h1>
+  <div id="block" class="block">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <button id="restart">restart</button>
+  <script>
+    let block = document.getElementById('block')
+    let item = document.getElementsByClassName('item')
+    let turn = 'x';
+    let timer = 0;
+    const startGame = () => {
+      for(let i = 0; i < item.length; i++) {
+        item[i].onclick = () => {
+          if(item[i].innerText.length > 0 || timer >=9 ) return
+          item[i].innerText = turn
+          turn = turn === 'x' ? 'o' : 'x'
+          item[i].style.color = turn === 'x' ? 'red' : 'green'
+        }
+      }
+    }
+    startGame()
+
+  </script>
+</body>
+</html>

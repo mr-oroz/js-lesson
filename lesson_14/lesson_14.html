@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <style>
+      img {
+        display: none;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="search"  placeholder="search" type="text" />
+    <button onclick="search()">search</button>
+    <img id="cat" src="https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761.jpg" alt="" />
+    <img id="dog" src="https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg" alt="" />
+    <img id="tiger" src="https://media.4-paws.org/5/4/4/c/544c2b2fd37541596134734c42bf77186f0df0ae/VIER%20PFOTEN_2017-10-20_164-3854x2667-1920x1329.jpg" alt="" />
+    <img id="not" src="https://www.nativespeakeronline.com/wp-content/uploads/2013/06/no_not2.png" alt="" />
+
+
+    <input name="radio" type="radio">
+    <label for="">ночь</label>
+    <input name="radio"  type="radio">
+    <label for="">день</label>
+    
+
+    <script>
+      let cat = document.getElementById("cat");
+      let dog = document.getElementById("dog");
+      let tiger = document.getElementById("tiger");
+      let not = document.getElementById("not");
+      let searchInput = document.getElementById("search");
+
+
+      const search = () => {
+        if(searchInput.value === 'cat') {
+          cat.style.display = 'block'
+          dog.style.display = 'none'
+          tiger.style.display = 'none'
+          not.style.display = 'none'
+        } else if(searchInput.value === 'dog') {
+          cat.style.display = 'none'
+          dog.style.display = 'block'
+          tiger.style.display = 'none'
+          not.style.display = 'none'
+        } else if (searchInput.value === 'tiger') {
+          cat.style.display = 'none'
+          dog.style.display = 'none'
+          tiger.style.display = 'block'
+          not.style.display = 'none'
+        } else {
+          cat.style.display = 'none'
+          dog.style.display = 'none'
+          tiger.style.display = 'none'
+          not.style.display = 'block'
+        }
+        searchInput.value = ''
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        color: red;
+        background-color: green;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn" onclick="btn()">click</button>
+    <div id="div"></div>
+    <script>
+      let button = document.getElementsByTagName("button")[0];
+      let div = document.getElementById("div");
+
+      //   let questions = [
+      //         { question: 'КР президенти ким?', output: 'Садыр Жапаров', score: 2 },
+      //         { question: 'Кыргызстанда канча область бар?', output: '7', score: 2 },
+      //         { question: 'Озгон району кайсы областка кирет', output: 'Ош', score: 2 },
+      //         { question: 'Бетховин ким болгон?', output: 'Композитор', score: 2 },
+      //         { question: 'Узбекистандын борбор шаары кайсы', output: 'Ташкент', score: 2 }
+      //     ]
+
+      // for(let i = 0; i < questions.length; i++) {
+      //   let question = prompt(questions[i].question)
+      // }
+      let active = false;
+      const btn = () => {
+        active = !active;
+        if (active) {
+          div.classList.add("box");
+        } else {
+          div.classList.remove("box");
+        }
+      };
+    </script>
+  </body>
+</html>
